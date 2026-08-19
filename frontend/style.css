@@ -1,0 +1,97 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 30px;
+  font-size: 2.5rem;
+  color: #ffdd57;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #ff4757;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #e84118;
+}
+
+#movieResult {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.movie-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.movie-card h2 {
+  color: #ffdd57;
+  margin-bottom: 10px;
+}
+
+.movie-card img {
+  border-radius: 8px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.movie-card p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  display: none; /* hidden until expanded */
+}
+
+.movie-card.active p {
+  display: block; /* show details when clicked */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #movieResult {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-card {
+    width: 90%;
+  }
+}
